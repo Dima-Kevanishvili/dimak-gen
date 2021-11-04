@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "dist",
+		"baseUrl": "./src",
+		"rootDir": "./src",
+		"strict": true,
+		"lib": ["esnext"],
+		"esModuleInterop": true,
+		"paths": {
+			"@prisma": ["../node_modules/.prisma"],
+			"@gql/*": ["./gql/*"]
+		}
+	},
+	"include": ["src/**/*"]
+}

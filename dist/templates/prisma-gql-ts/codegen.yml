@@ -1,0 +1,18 @@
+overwrite: true
+schema: "./src/gql/schema.ts"
+documents: null
+generates:
+  "./src/gql/generated/gqlTypes.ts":
+    config:
+      useIndexSignature: true
+      contextType: "@gql/context#Context"
+      optionalType: "undefined"
+      mapperTypeSuffix: "Model"
+      mappers:
+        User: "@prisma/client/index.d#User"
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+require:
+  - "ts-node/register/transpile-only"
+  - "tsconfig-paths/register"
